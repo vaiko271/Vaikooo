@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Vaiko | Web Developer</title>
-
-<meta name="description" content="Vaiko - Beginner Web Developer Portfolio">
+    <title>VAJRA FITNESS</title>
 
     <style>
         * {
@@ -17,83 +15,122 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #f5f7ff;
-            color: #222;
+            background: #111;
+            color: white;
         }
 
-        /* Navigation */
         nav {
-            background: #111827;
+            background: #000;
             padding: 20px;
             text-align: center;
+        }
+
+        nav h2 {
+            color: #ff3c00;
+            margin-bottom: 15px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 18px;
+            margin: 0 10px;
             font-weight: bold;
-            margin: 0 15px;
         }
 
-        /* Home */
-        .home {
+        .hero {
             min-height: 600px;
-            background: linear-gradient(135deg, #6d00ff, #1677ff);
-            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 120px 20px;
+            padding: 40px 20px;
+
+            background: linear-gradient(
+                135deg,
+                #111,
+                #ff3c00
+            );
         }
 
-        .home h1 {
-            font-size: 48px;
-            margin-bottom: 25px;
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
         }
 
-        .home p {
-            font-size: 22px;
-            margin-bottom: 35px;
+        .hero h1 span {
+            color: #ffe600;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
         }
 
         .btn {
             display: inline-block;
             background: white;
-            color: #2878e8;
-            padding: 16px 35px;
-            border-radius: 50px;
+            color: #ff3c00;
+            padding: 14px 30px;
+            border-radius: 30px;
             text-decoration: none;
-            font-size: 18px;
             font-weight: bold;
         }
 
-        /* About */
         .about {
-            padding: 80px 25px;
+            padding: 80px 20px;
             text-align: center;
+            background: #181818;
         }
 
-        .about h2 {
+        .about h2,
+        .services h2,
+        .contact h2 {
             font-size: 40px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .about p {
             max-width: 700px;
             margin: auto;
-            font-size: 20px;
             line-height: 1.7;
+            font-size: 18px;
         }
 
-        /* Contact */
-        .contact {
-            padding: 80px 25px;
-            background: white;
+        .services {
+            padding: 80px 20px;
             text-align: center;
+            background: #222;
         }
 
-        .contact h2 {
-            font-size: 40px;
-            margin-bottom: 30px;
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: #333;
+            width: 280px;
+            padding: 30px 20px;
+            border-radius: 15px;
+        }
+
+        .card h3 {
+            color: #ff3c00;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        .contact {
+            padding: 80px 20px;
+            text-align: center;
+            background: #181818;
         }
 
         input,
@@ -103,179 +140,71 @@
             max-width: 500px;
             margin: 15px auto;
             padding: 15px;
-            border: 1px solid #ddd;
             border-radius: 10px;
-            font-size: 16px;
+            border: none;
         }
 
         textarea {
             height: 130px;
-            resize: none;
         }
 
-        .contact button {
-            background: #2575fc;
+        button {
+            background: #ff3c00;
             color: white;
             border: none;
-            padding: 15px 35px;
+            padding: 14px 30px;
             border-radius: 30px;
-            font-size: 17px;
             font-weight: bold;
+            cursor: pointer;
         }
 
-        /* Mobile */
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            margin-top: 10px;
+        }
+
         @media (max-width: 600px) {
 
-            .home h1 {
-                font-size: 38px;
+            .hero h1 {
+                font-size: 40px;
             }
 
-            .home p {
+            .hero p {
                 font-size: 18px;
             }
 
             nav a {
-                margin: 0 8px;
-                font-size: 16px;
+                display: inline-block;
+                margin-top: 8px;
             }
-        }.home-content {
-    max-width: 800px;
-    margin: auto;
-}
-
-.small-title {
-    font-size: 15px;
-    letter-spacing: 3px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.home h1 {
-    font-size: 55px;
-    margin-bottom: 15px;
-}
-
-.home h1 span {
-    color: #ffe600;
-}
-
-.home h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.intro {
-    max-width: 650px;
-    margin: 0 auto 35px;
-    line-height: 1.6;
-}
-
-.home-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.second-btn {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-}.about-text {
-    max-width: 700px;
-    margin: 0 auto 40px;
-    line-height: 1.7;
-}
-
-.skills {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.skill-card {
-    background: white;
-    width: 280px;
-    padding: 30px 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
-
-.skill-card h3 {
-    font-size: 25px;
-    margin-bottom: 15px;
-}
-
-.skill-card p {
-    font-size: 17px;
-    line-height: 1.5;
-}.contact-text {
-    font-size: 18px;
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-.contact form {
-    max-width: 550px;
-    margin: auto;
-}
-
-.contact input,
-.contact textarea {
-    width: 100%;
-    margin: 12px 0;
-}
-
-.contact button {
-    cursor: pointer;
+        }.card {
     transition: 0.3s;
 }
 
-.contact button:hover {
-    transform: scale(1.05);
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 60, 0, 0.25);
 }
 
-#successMessage {
-    margin-top: 20px;
-    font-weight: bold;
-}/* ===== Professional Effects ===== */
+.btn {
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255,255,255,0.2);
+}
 
 html {
     scroll-behavior: smooth;
 }
 
-.skill-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-.btn {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-nav a {
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #4da3ff;
-}
-
-/* Home animation */
-
-.home-content {
+.hero > div {
     animation: fadeUp 1s ease;
 }
 
@@ -289,414 +218,856 @@ nav a:hover {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Section heading */
-
-.about h2,
-.contact h2 {
-    animation: fadeUp 1s ease;
-}/* ===== Projects ===== */
-
-.projects {
-    padding: 80px 25px;
+}.gallery {
+    padding: 80px 20px;
     text-align: center;
-    background: #eef2ff;
+    background: #111;
 }
 
-.projects h2 {
+.gallery h2 {
     font-size: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-.projects-text {
+.gallery > p {
     font-size: 18px;
     margin-bottom: 40px;
 }
 
-.project-container {
-    max-width: 1000px;
-    margin: auto;
+.gallery-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.project-card {
-    background: white;
+.gallery-box {
     width: 280px;
-    padding: 30px 20px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    background: linear-gradient(135deg, #333, #ff3c00);
     transition: 0.3s;
 }
 
-.project-card:hover {
+.gallery-box:hover {
+    transform: scale(1.05);
+}
+
+.gallery-box h3 {
+    font-size: 22px;
+}.plans {
+    padding: 80px 20px;
+    text-align: center;
+    background: #222;
+}
+
+.plans h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.plan-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background: #333;
+    width: 280px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.plan-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
-.project-card h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
+.plan-card h3 {
+    font-size: 25px;
+    color: #ff3c00;
 }
 
-.project-card p {
-    font-size: 16px;
-    line-height: 1.6;
+.plan-card h4 {
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+.plan-card p {
     margin-bottom: 20px;
 }
 
-.project-card a {
+.plan-card a {
     display: inline-block;
-    background: #2575fc;
+    background: #ff3c00;
     color: white;
     padding: 10px 20px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
-}/* ===== Footer ===== */
+}.gallery-box {
+    overflow: hidden;
+}
 
-.footer {
-    background: #111827;
-    color: white;
+.gallery-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}.why-us {
+    padding: 80px 20px;
     text-align: center;
-    padding: 50px 20px 30px;
+    background: #181818;
 }
 
-.footer h3 {
-    font-size: 30px;
-    margin-bottom: 10px;
+.why-us h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
 }
 
-.footer p {
-    margin-bottom: 20px;
+.why-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.social-links {
+.why-card {
+    background: #333;
+    width: 280px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+}
+
+.why-card h3 {
+    color: #ff3c00;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.why-card p {
+    line-height: 1.6;
+}.contact-buttons {
+    margin-top: 25px;
     display: flex;
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
-    margin-bottom: 30px;
 }
 
-.social-links a {
-    color: white;
+.call-btn,
+.whatsapp-btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
     text-decoration: none;
-    border: 1px solid #555;
-    padding: 10px 18px;
-    border-radius: 25px;
+    font-weight: bold;
+    color: white;
     transition: 0.3s;
 }
 
-.social-links a:hover {
-    background: white;
-    color: #111827;
+.call-btn {
+    background: #2575fc;
 }
 
-.copyright {
-    font-size: 14px;
-    opacity: 0.7;
-    margin-bottom: 0 !important;
-}/* ===== Mobile Navbar ===== */
+.whatsapp-btn {
+    background: #25d366;
+}
 
-nav {
+.call-btn:hover,
+.whatsapp-btn:hover {
+    transform: translateY(-4px);
+}.location-box {
+    max-width: 600px;
+    margin: 40px auto 0;
+    padding: 30px 20px;
+    background: #333;
+    border-radius: 15px;
+}
+
+.location-box h3 {
+    font-size: 25px;
+    color: #ff3c00;
+    margin-bottom: 15px;
+}
+
+.location-box p {
+    margin: 10px 0;
+    line-height: 1.6;
+}.map-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: #ff3c00;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.map-btn:hover {
+    transform: translateY(-4px);
+}.testimonials {
+    padding: 80px 20px;
+    text-align: center;
+    background: #111;
+}
+
+.testimonials h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: #333;
+    width: 280px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-card p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.testimonial-card h3 {
+    color: #ff3c00;
+    font-size: 18px;
+}.testimonial-card {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.testimonial-card p::before {
+    content: "★ ★ ★ ★ ★";
+    display: block;
+    color: #ff3c00;
+    font-size: 18px;
+    margin-bottom: 15px;
+}.faq {
+    padding: 80px 20px;
+    text-align: center;
+    background: #222;
+}
+
+.faq h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.faq-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.faq-card {
+    background: #333;
+    width: 280px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.faq-card:hover {
+    transform: translateY(-8px);
+}
+
+.faq-card h3 {
+    color: #ff3c00;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.faq-card p {
+    line-height: 1.6;
+}@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    nav h2 {
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .gallery h2,
+    .plans h2,
+    .why-us h2,
+    .testimonials h2,
+    .faq h2,
+    .contact h2 {
+        font-size: 32px;
+    }
+
+    .gallery-box,
+    .plan-card,
+    .why-card,
+    .testimonial-card,
+    .faq-card {
+        width: 90%;
+    }
+
+}.gallery-content {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 40px auto 0;
+}
+
+.gallery-item {
+    width: 280px;
+    height: 200px;
+    padding: 30px 20px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #222, #3a3a3a);
+    border: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    border-color: #ff3c00;
+    box-shadow: 0 15px 30px rgba(255, 60, 0, 0.2);
+}
+
+.gallery-item span {
+    color: #ff3c00;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.gallery-item h3 {
+    font-size: 28px;
+    margin: 0;
+}.gallery-item:nth-child(1) {
+    background: linear-gradient(145deg, #151515, #4a1808);
+}
+
+.gallery-item:nth-child(2) {
+    background: linear-gradient(145deg, #151515, #333);
+}
+
+.gallery-item:nth-child(3) {
+    background: linear-gradient(145deg, #151515, #4a1808);
+}
+
+.gallery-item::before {
+    content: "◆";
+    font-size: 28px;
+    color: #ff3c00;
+    margin-bottom: 15px;
+}
+
+.gallery-item:hover::before {
+    transform: scale(1.2);
+}.trainers {
+    padding: 80px 20px;
+    text-align: center;
+    background: #181818;
+}
+
+.trainers h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.trainer-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.trainer-card {
+    width: 280px;
+    padding: 35px 20px;
+    background: #333;
+    border-radius: 18px;
+    border: 1px solid #444;
+    transition: 0.3s;
+}
+
+.trainer-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff3c00;
+    box-shadow: 0 15px 30px rgba(255, 60, 0, 0.2);
+}
+
+.trainer-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #ff3c00;
+    color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 18px 25px;
-}
-
-.logo {
-    color: white;
-    font-size: 25px;
+    justify-content: center;
+    font-size: 20px;
     font-weight: bold;
 }
 
-.nav-links {
+.trainer-card h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #ff3c00;
+}
+
+.trainer-card p {
+    line-height: 1.6;
+}.cta {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ff3c00, #8f1f00);
+}
+
+.cta h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: white;
+    color: #ff3c00;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}footer {
+    padding: 50px 20px 25px;
+    text-align: center;
+    background: #0b0b0b;
+    border-top: 1px solid #333;
+}
+
+footer h3 {
+    font-size: 28px;
+    color: #ff3c00;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aaa;
+    margin: 8px 0;
+}
+
+.footer-links {
+    margin: 25px 0;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.menu-icon {
-    display: none;
+.footer-links a {
     color: white;
-    font-size: 30px;
-    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-@media (max-width: 600px) {
+.footer-links a:hover {
+    color: #ff3c00;
+}
 
-    nav {
-        position: relative;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: #111827;
-        flex-direction: column;
-        padding: 15px 0;
-        z-index: 100;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        margin: 12px 0;
-    }
+footer .copyright {
+    font-size: 14px;
+    margin-top: 25px;
 }
     </style>
 </head>
-<script>
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
 
-        event.preventDefault();
+<body>
 
-        document.getElementById("successMessage").textContent =
-            "Message successfully submitted! ✅";
+    <nav>
+        <h2>VAJRA FITNESS</h2>
 
-        document.getElementById("contactForm").reset();
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#plans">Plans</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    });
-      </script>
-<body><!-- Footer -->
-<footer class="footer">
 
-    <h3>Vaiko</h3>
+    <section class="hero" id="home">
 
-    <p>
-        Beginner Web Developer 🚀
-    </p>
+        <div>
+            <p>WELCOME TO</p>
 
-    <div class="social-links">
+            <h1>
+                VAJRA <span>FITNESS</span>
+            </h1>
 
-        <a href="https://www.instagram.com/im._.suhail_06?stkn=OG96YWwzcjd5MmFu">Instagram</a>
+            <p>
+                Build Your Body. Build Your Confidence.
+            </p>
 
-        <a href="#" target="_blank">YouTube</a>
+            <a href="#contact" class="btn">
+                Join Now
+            </a>
+        </div>
 
-        <a href="#" target="_blank">GitHub</a>
+    </section>
+
+
+    <section class="about" id="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            VAJRA FITNESS ek modern fitness center hai
+            jahan aap apni strength, fitness aur confidence
+            ko improve kar sakte hain.
+        </p>
+
+    </section>
+
+
+    <section class="services" id="services">
+
+        <h2>Our Services</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Strength Training</h3>
+                <p>
+                    Build strength and muscle with
+                    professional training.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Personal Training</h3>
+                <p>
+                    Get a personalized workout plan
+                    according to your goals.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Weight Loss</h3>
+                <p>
+                    Improve your fitness and achieve
+                    your weight-loss goals.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+<section class="gallery" id="gallery">
+
+    <h2>Our Gym</h2>
+
+    <p>Train hard. Stay focused. Get stronger.</p>
+<div class="gallery-content">
+    <div class="gallery-item">
+        <span>STRENGTH</span>
+        <h3>Build Power</h3>
+    </div>
+
+    <div class="gallery-item">
+        <span>FITNESS</span>
+        <h3>Train Hard</h3>
+    </div>
+
+    <div class="gallery-item">
+        <span>RESULTS</span>
+        <h3>Stay Strong</h3>
+    </div>
+</div>
+
+ 
+
+</section>
+  <section class="plans" id="plans">
+
+    <h2>Membership Plans</h2>
+
+    <div class="plan-container">
+
+        <div class="plan-card">
+            <h3>Monthly</h3>
+            <h4>₹999</h4>
+            <p>1 Month Membership</p>
+            <a href="https://wa.me/917217235437"
+            target="_blank">Join Now</a>
+        </div>
+
+        <div class="plan-card">
+            <h3>Quarterly</h3>
+            <h4>₹2499</h4>
+            <p>3 Months Membership</p>
+            <a href="https://wa.me/917217235437"
+            target="_blank">Join Now</a>
+        </div>
+
+        <div class="plan-card">
+            <h3>Yearly</h3>
+            <h4>₹7999</h4>
+            <p>12 Months Membership</p>
+            <a href="https://wa.me/917217235437"
+              target="_blank">Join Now</a>
+        </div>
 
     </div>
 
-    <p class="copyright">
-        © 2026 Vaiko. All Rights Reserved.
-    </p>
+  < class="why-us">
+
+    <h2>Why Choose Us?</h2>
+
+    <div class="why-container">
+
+        <div class="why-card">
+            <h3>🏆 Expert Trainers</h3>
+            <p>Experienced trainers aapko proper guidance denge.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>💪 Modern Equipment</h3>
+            <p>Latest aur quality gym equipment available hain.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>🔥 Results Focused</h3>
+            <p>Aapke fitness goals achieve karne par focus.</p>
+        </div>
+
+    </div>
+
+  < class="testimonials">
+
+    <h2>What Our Members Say</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+            <p>"Amazing gym and very supportive trainers!"</p>
+            <h3>— Rahul</h3>
+        </div>
+
+        <div class="testimonial-card">
+            <p>"Great equipment and excellent environment."</p>
+            <h3>— Aman</h3>
+        </div>
+
+        <div class="testimonial-card">
+            <p>"Best place to stay fit and motivated."</p>
+            <h3>— Rohit</h3>
+        </div>
+
+    </div>
+
+  < class="faq">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-container">
+
+        <div class="faq-card">
+            <h3>Gym ki timing kya hai?</h3>
+            <p>Monday to Sunday, 5:00 AM se 10:00 PM tak.</p>
+        </div>
+
+        <div class="faq-card">
+            <h3>Kya Personal Training available hai?</h3>
+            <p>Haan, hamare experienced trainers personal training provide karte hain.</p>
+        </div>
+
+        <div class="faq-card">
+            <h3>Membership kaise le sakte hain?</h3>
+            <p>Aap Contact section se Call ya WhatsApp karke membership le sakte hain.</p>
+        </div>
+
+    </div>
+
+  < class="trainers">
+
+    <h2>Our Trainers</h2>
+
+    <div class="trainer-container">
+
+        <div class="trainer-card">
+            <div class="trainer-icon">01</div>
+            <h3>Strength Coach</h3>
+            <p>Strength aur muscle building ke liye professional guidance.</p>
+        </div>
+
+        <div class="trainer-card">
+            <div class="trainer-icon">02</div>
+            <h3>Fitness Coach</h3>
+            <p>Fitness, stamina aur overall body transformation par focus.</p>
+        </div>
+
+        <div class="trainer-card">
+            <div class="trainer-icon">03</div>
+            <h3>Personal Trainer</h3>
+            <p>Aapke goals ke according personalized workout guidance.</p>
+        </div>
+
+    </div>
+
+ <section class="cta">
+
+    <h2>Ready To Get Stronger?</h2>
+
+    <p>Start your fitness journey with VAJRA FITNESS today.</p>
+
+    <a href="#plans" class="cta-btn">View Membership Plans</a>
+
+  </section>
+    <section class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+<div class="location-box">
+
+    <h3>Visit Our Gym</h3>
+
+    <p>📍 Your Gym Address Here</p>
+
+    <p>🕐 Monday - Sunday: 5:00 AM - 10:00 PM</p>
+<a href="https://www.google.com/maps" target="_blank" class="map-btn">
+    View on Google Maps
+</a>
+</div>
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                required
+            <input
+
+              
+    type="tel"
+    placeholder="Your Phone Number"
+    required
+>
+
+            <textarea
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+<div class="contact-buttons">
+
+    <a href="tel:+9191721723543" class="call-btn">
+        Call Now
+    </a>
+
+    <a href="https://wa.me/9191721723543" target="_blank" class="whatsapp-btn">
+        WhatsApp
+    </a>
+
+</div>
+        <p id="message"></p>
+
+    </section>
+
+
+<footer>
+
+    <h3>VAJRA FITNESS</h3>
+
+    <p>Build Strong. Stay Strong.</p>
+
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#plans">Plans</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <p class="copyright">© 2026 VAJRA FITNESS. All Rights Reserved.</p>
 
 </footer>
 
-    <!-- Navigation --><a href="#home">Home</a>
-<a  
-    <nav>
-    <div class="logo">Vaiko</div>
 
-    <div class="menu-icon" onclick="toggleMenu()">
-        ☰
-    </div>
+    <script>
 
-    <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
-    </nav>
+        document
+        .getElementById("contactForm")
+        .addEventListener("submit", function(event) {
 
-    <!-- Home -->
-    <section class="home" id="home">
+            event.preventDefault();
 
-    <div class="home-content">
+            document.getElementById("message")
+            .textContent = "Message submitted successfully!";
 
-        <p class="small-title">WELCOME TO MY WEBSITE</p>
+            this.reset();
 
-        <h1>
-            Hi, I'm <span>Vaiko</span> 👋
-        </h1>
+        });
 
-        <h2>
-            Beginner Web Developer 🚀
-        </h2>
+    </script>
 
-        <p class="intro">
-            Main web development seekh raha hoon aur
-            beautiful & modern websites banana mera goal hai.
-        </p>
-
-        <div class="home-buttons">
-            <a href="#about" class="btn">
-                About Me
-            </a>
-
-            <a href="#contact" class="btn second-btn">
-                Contact Me
-            </a>
-        </div>
-
-    </div>
-
-    </section>
-
-        <h1>Welcome to My Website 👋</h1>
-
-        <p>
-            Main apni first website bana raha hoon 🚀
-        </p>
-
-        <a href="#about" class="btn">
-            Explore
-        </a>
-
-    </>
-
-    <!-- About -->
-    <section class="about" id="about">
-
-    <h2>About Me</h2>
-
-    <p class="about-text">
-        Main web development seekh raha hoon aur
-        modern, fast aur attractive websites banana
-        mera goal hai.
-    </p>
-
-    <div class="skills">
-
-        <div class="skill-card">
-            <h3>HTML</h3>
-            <p>Website ka structure banana.</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>CSS</h3>
-            <p>Website ko beautiful design dena.</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>JavaScript</h3>
-            <p>Website mein functionality add karna.</p>
-        </div>
-
-    </div>
-
-    </>
-
-        <h2>About Me</h2>
-
-        <p>
-            
-            
-        
-        </p>
-
-    </section>
-
-    <!-- Contact --><!-- Projects -->
-<section class="projects" id="projects">
-
-    <h2>My Projects</h2>
-
-    <p class="projects-text">
-        Ye mere kuch web development projects hain.
-    </p>
-
-    <div class="project-container">
-
-        <div class="project-card">
-            <h3>My First Website</h3>
-            <p>
-                HTML aur CSS se banayi hui meri first website.
-            </p>
-            <a href="#home">View Project</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>
-                Ek modern personal portfolio website.
-            </p>
-            <a href="#home">View Project</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Coming Soon</h3>
-            <p>
-                Bahut jald mera next project yahan hoga.
-            </p>
-            <a href="#contact">Contact Me</a>
-        </div>
-
-    </div>
-
-</section>
-    <section class="contact" id="contact">
-
-    <h2>Contact Me</h2>
-
-    <p class="contact-text">
-        Agar aap mujhse contact karna chahte hain,
-        neeche message bhej sakte hain.
-    </p>
-
-    <form id="contactForm">
-
-        <input
-            type="text"
-            id="name"
-            placeholder="Your Name"
-            required
-        >
-
-        <input
-            type="email"
-            id="email"
-            placeholder="Your Email"
-            required
-        >
-
-        <textarea
-            id="message"
-            placeholder="Your Message"
-            required
-        ></textarea>
-
-        <button type="submit">
-            Send Message
-        </button>
-
-    </form>
-
-    <p id="successMessage"></p>
-
-    </section>
-
-        <h2>Contact Me</h2>
-
-        <input type="text" placeholder="Your Name">
-
-        <input type="email" placeholder="Your Email">
-
-        <textarea placeholder="Your Message"></textarea>
-
-        <button>
-            Send Message
-        </button>
-
-    </>
-<script>
-function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-}
-</script>
 </body>
-</html>>
+</html>
