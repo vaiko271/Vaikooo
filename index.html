@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vaiko | Web Developer</title>
+
+<meta name="description" content="Vaiko - Beginner Web Developer Portfolio">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7ff;
+            color: #222;
+        }
+
+        /* Navigation */
+        nav {
+            background: #111827;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+
+        /* Home */
+        .home {
+            min-height: 600px;
+            background: linear-gradient(135deg, #6d00ff, #1677ff);
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .home h1 {
+            font-size: 48px;
+            margin-bottom: 25px;
+        }
+
+        .home p {
+            font-size: 22px;
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #2878e8;
+            padding: 16px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* About */
+        .about {
+            padding: 80px 25px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 20px;
+            line-height: 1.7;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 80px 25px;
+            background: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        input,
+        textarea {
+            display: block;
+            width: 90%;
+            max-width: 500px;
+            margin: 15px auto;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 130px;
+            resize: none;
+        }
+
+        .contact button {
+            background: #2575fc;
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            .home h1 {
+                font-size: 38px;
+            }
+
+            .home p {
+                font-size: 18px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 16px;
+            }
+        }.home-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.small-title {
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.home h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.home h1 span {
+    color: #ffe600;
+}
+
+.home h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.intro {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    line-height: 1.6;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.second-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}.about-text {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.skill-card {
+    background: white;
+    width: 280px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.skill-card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    font-size: 17px;
+    line-height: 1.5;
+}.contact-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.contact form {
+    max-width: 550px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    margin: 12px 0;
+}
+
+.contact button {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact button:hover {
+    transform: scale(1.05);
+}
+
+#successMessage {
+    margin-top: 20px;
+    font-weight: bold;
+}/* ===== Professional Effects ===== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4da3ff;
+}
+
+/* Home animation */
+
+.home-content {
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section heading */
+
+.about h2,
+.contact h2 {
+    animation: fadeUp 1s ease;
+}/* ===== Projects ===== */
+
+.projects {
+    padding: 80px 25px;
+    text-align: center;
+    background: #eef2ff;
+}
+
+.projects h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.projects-text {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.project-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: white;
+    width: 280px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-card a {
+    display: inline-block;
+    background: #2575fc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}/* ===== Footer ===== */
+
+.footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.footer h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid #555;
+    padding: 10px 18px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: white;
+    color: #111827;
+}
+
+.copyright {
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 0 !important;
+}/* ===== Mobile Navbar ===== */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 25px;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        position: relative;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111827;
+        flex-direction: column;
+        padding: 15px 0;
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 12px 0;
+    }
+}
+    </style>
+</head>
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        document.getElementById("successMessage").textContent =
+            "Message successfully submitted! ✅";
+
+        document.getElementById("contactForm").reset();
+
+    });
+      </script>
+<body><!-- Footer -->
+<footer class="footer">
+
+    <h3>Vaiko</h3>
+
+    <p>
+        Beginner Web Developer 🚀
+    </p>
+
+    <div class="social-links">
+
+        <a href="https://www.instagram.com/im._.suhail_06?stkn=OG96YWwzcjd5MmFu">Instagram</a>
+
+        <a href="#" target="_blank">YouTube</a>
+
+        <a href="#" target="_blank">GitHub</a>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 Vaiko. All Rights Reserved.
+    </p>
+
+</footer>
+
+    <!-- Navigation --><a href="#home">Home</a>
+<a  
+    <nav>
+    <div class="logo">Vaiko</div>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+    </nav>
+
+    <!-- Home -->
+    <section class="home" id="home">
+
+    <div class="home-content">
+
+        <p class="small-title">WELCOME TO MY WEBSITE</p>
+
+        <h1>
+            Hi, I'm <span>Vaiko</span> 👋
+        </h1>
+
+        <h2>
+            Beginner Web Developer 🚀
+        </h2>
+
+        <p class="intro">
+            Main web development seekh raha hoon aur
+            beautiful & modern websites banana mera goal hai.
+        </p>
+
+        <div class="home-buttons">
+            <a href="#about" class="btn">
+                About Me
+            </a>
+
+            <a href="#contact" class="btn second-btn">
+                Contact Me
+            </a>
+        </div>
+
+    </div>
+
+    </section>
+
+        <h1>Welcome to My Website 👋</h1>
+
+        <p>
+            Main apni first website bana raha hoon 🚀
+        </p>
+
+        <a href="#about" class="btn">
+            Explore
+        </a>
+
+    </>
+
+    <!-- About -->
+    <section class="about" id="about">
+
+    <h2>About Me</h2>
+
+    <p class="about-text">
+        Main web development seekh raha hoon aur
+        modern, fast aur attractive websites banana
+        mera goal hai.
+    </p>
+
+    <div class="skills">
+
+        <div class="skill-card">
+            <h3>HTML</h3>
+            <p>Website ka structure banana.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>CSS</h3>
+            <p>Website ko beautiful design dena.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>JavaScript</h3>
+            <p>Website mein functionality add karna.</p>
+        </div>
+
+    </div>
+
+    </>
+
+        <h2>About Me</h2>
+
+        <p>
+            
+            
+        
+        </p>
+
+    </section>
+
+    <!-- Contact --><!-- Projects -->
+<section class="projects" id="projects">
+
+    <h2>My Projects</h2>
+
+    <p class="projects-text">
+        Ye mere kuch web development projects hain.
+    </p>
+
+    <div class="project-container">
+
+        <div class="project-card">
+            <h3>My First Website</h3>
+            <p>
+                HTML aur CSS se banayi hui meri first website.
+            </p>
+            <a href="#home">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>
+                Ek modern personal portfolio website.
+            </p>
+            <a href="#home">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Coming Soon</h3>
+            <p>
+                Bahut jald mera next project yahan hoga.
+            </p>
+            <a href="#contact">Contact Me</a>
+        </div>
+
+    </div>
+
+</section>
+    <section class="contact" id="contact">
+
+    <h2>Contact Me</h2>
+
+    <p class="contact-text">
+        Agar aap mujhse contact karna chahte hain,
+        neeche message bhej sakte hain.
+    </p>
+
+    <form id="contactForm">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            required
+        >
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            required
+        >
+
+        <textarea
+            id="message"
+            placeholder="Your Message"
+            required
+        ></textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+
+    <p id="successMessage"></p>
+
+    </section>
+
+        <h2>Contact Me</h2>
+
+        <input type="text" placeholder="Your Name">
+
+        <input type="email" placeholder="Your Email">
+
+        <textarea placeholder="Your Message"></textarea>
+
+        <button>
+            Send Message
+        </button>
+
+    </>
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+</body>
+</html>>
